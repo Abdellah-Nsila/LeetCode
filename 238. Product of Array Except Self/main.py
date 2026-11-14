@@ -1,11 +1,14 @@
 
 
 def productExceptSelf(nums: list[int]) -> list[int]:
-    product = 0
-    productExceptSelf()
+    n = len(nums)
+    mul =  1
+    
+    for num in nums :
+        mul *= num
+    print(mul)
+    answer = [int(mul >> num - 1) for num in nums]
+    return answer
 
 
 print(productExceptSelf([1,2,3,4]));
-
-
-2 * 3 * 10
